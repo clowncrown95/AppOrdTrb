@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppOrdTrb.loginOT"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Login" FontSize="26" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
+                
+                <Label Text="Username:" TextColor="Black" FontSize="20" VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0"/>
+                
+                <Entry x:Name="userName" Keyboard="Default" Placeholder="prueba@gmail.com" PlaceholderColor="Gray"
+                       HorizontalOptions="CenterAndExpand" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="1" />
+                
+                <Label Text="Password:" TextColor="Black" FontSize="20" VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="0"/>
+                
+                <Entry x:Name="passWord" Keyboard="Default" Placeholder="Password" PlaceholderColor="Gray" 
+                       VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" IsPassword="True" 
+                       BackgroundColor="Transparent" Grid.Row="2" Grid.Column="1"/>
+                <Button x:Name="btnLogin" Text="Login" Clicked="btnLogin_Clicked" Grid.Row="3" Grid.Column="0"
+                        BorderColor="Black" BorderWidth="2"/>
+                <Button x:Name="btnRegistro" Text="Sing-in" Clicked="btnRegistro_Clicked" Grid.Row="3" Grid.Column="1"
+                        BorderColor="Black" BorderWidth="2"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

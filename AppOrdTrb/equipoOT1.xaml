@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppOrdTrb.equipoOT1"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Equipo" Grid.Row="0" Grid.Column="0"/>
+                <Entry x:Name="txtEq" Keyboard="Default" Placeholder="Laptop" PlaceholderColor="Gray" Grid.Row="0" Grid.Column="1"/>
+            </Grid>
+
+            <Grid VerticalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnSave1" Text="Save" Clicked="btnSave1_Clicked"  Grid.Row="1" Grid.Column="1" BorderWidth="2" BorderColor="Black"/>
+                <Button x:Name="btnBack1" Text="Back" Clicked="btnBack1_Clicked"  Grid.Row="1" Grid.Column="2" BorderWidth="2" BorderColor="Black"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

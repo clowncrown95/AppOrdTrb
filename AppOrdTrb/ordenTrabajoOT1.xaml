@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppOrdTrb.ordenTrabajoOT1"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Cliente" Grid.Row="0" Grid.Column="0"/>
+                <Picker Title="Selecione un cliente" ItemsSource="{Binding slcCliente}" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="Estado" Grid.Row="1" Grid.Column="0"/>
+                <Picker Title="Selecione el estado" ItemsSource="{Binding slcEstado}" Grid.Row="1" Grid.Column="1"/>
+
+                <Label Text="Equipo" Grid.Row="2" Grid.Column="0"/>
+                <Picker Title="Selecione un equipo" ItemsSource="{Binding slcEquipo}" Grid.Row="2" Grid.Column="1"/>
+
+                <Label Text="Modelo" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="txtMod" Keyboard="Default" Placeholder="x34r60DDF" PlaceholderColor="Gray" Grid.Row="3" Grid.Column="1"/>
+
+                <Label Text="Serie" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="txtSer" Keyboard="Default" Placeholder="Asd124584-546" PlaceholderColor="Gray" Grid.Row="4" Grid.Column="1"/>
+
+                <Label Text="Marca" Grid.Row="5" Grid.Column="0"/>
+                <Entry x:Name="txtMar" Keyboard="Default" Placeholder="Acer" PlaceholderColor="Gray" Grid.Row="5" Grid.Column="1"/>
+
+                <Label Text="Descripcion" Grid.Row="6" Grid.Column="0"/>
+                <Entry x:Name="txtDesc" Keyboard="Default" Placeholder="Descripcion del equipo" PlaceholderColor="Gray" Grid.Row="6" Grid.Column="1"/>
+
+                <Label Text="Fecha Ingreso" Grid.Row="7" Grid.Column="0"/>
+                <Entry x:Name="txtFecIng" Keyboard="Default" Placeholder="10-11-2021" PlaceholderColor="Gray" Grid.Row="7" Grid.Column="1"/>
+
+                <Label Text="Fecha Entrega" Grid.Row="8" Grid.Column="0"/>
+                <Entry x:Name="txtFecEnt" Keyboard="Default" Placeholder="15-11-2021" PlaceholderColor="Gray" Grid.Row="8" Grid.Column="1"/>
+            </Grid>
+
+            <Grid VerticalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnSave4" Text="Save" Clicked="btnSave4_Clicked"  Grid.Row="1" Grid.Column="1" BorderWidth="2" BorderColor="Black"/>
+                <Button x:Name="btnBack4" Text="Back" Clicked="btnBack4_Clicked"  Grid.Row="1" Grid.Column="2" BorderWidth="2" BorderColor="Black"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

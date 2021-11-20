@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppOrdTrb.estadoOT"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start">
+            <Frame BackgroundColor="RoyalBlue" Padding="16" CornerRadius="0">
+                <Label Text="Estado" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+            </Frame>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <ListView x:Name="lvEst" SelectionMode="Single" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding idEstado}"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Est_Estado}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+            <Grid VerticalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnGet2" Grid.Row="1" Grid.Column="0" Text="Get" Clicked="btnGet2_Clicked"  BorderWidth="2" BorderColor="Black"/>
+                <Button x:Name="btnPost2" Grid.Row="1" Grid.Column="1" Text="Post" Clicked="btnPost2_Clicked"  BorderWidth="2" BorderColor="Black"/>
+                <Button x:Name="btnPut2" Grid.Row="1" Grid.Column="2" Text="Put" Clicked="btnPut2_Clicked"  BorderWidth="2" BorderColor="Black"/>
+                <Button x:Name="btnDelete2" Grid.Row="1" Grid.Column="3" Text="Delete" Clicked="btnDelete2_Clicked"  BorderWidth="2" BorderColor="Black"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

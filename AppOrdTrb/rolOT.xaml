@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppOrdTrb.rolOT"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Start">
+            <Frame BackgroundColor="RoyalBlue" Padding="16" CornerRadius="0">
+                <Label Text="Rol" HorizontalTextAlignment="Center" TextColor="White" FontSize="26"/>
+            </Frame>
+            <ScrollView VerticalOptions="FillAndExpand">
+                <ListView x:Name="lvRol" SelectionMode="Single" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Grid.Row="0" Grid.Column="0" Text="{Binding idRol}"/>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding Rol_Rol}"/>
+                                    <Label Grid.Row="0" Grid.Column="2" Text="{Binding Rol_Nivel}"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollView>
+            <Grid VerticalOptions="End">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="btnGet3" Grid.Row="1" Grid.Column="0" Text="Get" Clicked="btnGet3_Clicked"  BorderWidth="2" BorderColor="Black"/>
+                <Button x:Name="btnPost3" Grid.Row="1" Grid.Column="1" Text="Post" Clicked="btnPost3_Clicked"  BorderWidth="2" BorderColor="Black"/>
+                <Button x:Name="btnPut3" Grid.Row="1" Grid.Column="2" Text="Put" Clicked="btnPut3_Clicked"  BorderWidth="2" BorderColor="Black"/>
+                <Button x:Name="btnDelete3" Grid.Row="1" Grid.Column="3" Text="Delete" Clicked="btnDelete3_Clicked"  BorderWidth="2" BorderColor="Black"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
